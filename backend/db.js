@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
-await mongoose.connect('mongodb+srv://krutarthpipaliya90:NneDZYtRdaJHwnWd@cluster0.duhrz.mongodb.net/paytm');
+const URL = env(DATABSE_URL);
+await mongoose.connect(URL);
 
 const userSchema = new mongoose.Schema({
     username : String,
